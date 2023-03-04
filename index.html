@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Clicker</title>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+        <link rel="stylesheet" href="clicker.css" type="text/css">
+    </head>
+
+    <body>
+        <main>
+            <div id="display"></div>
+
+            <button id="button">Тисніть</button>
+
+            <div id="counter"></div>
+
+            <div class="buttons" id="myButton" onclick="location.reload()"><span>Спочатку</span></div>
+
+        <div class="sound">
+            <buttons onclick="togglePlay()"><img src="sound-icon.png" width="40"></buttons>
+              <audio id="myAudio">
+                <source src="music-donbass.mp3" type="audio/mpeg">
+              </audio>
+        </div>
+        </main>
+
+        <script src="clicker.js"></script>
+    </body>
+</html>
