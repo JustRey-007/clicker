@@ -12,6 +12,7 @@ body {
     height: 100vh;
     background-color: #222;
     color: white;
+    user-select: none;
 }
 
 main {
@@ -254,14 +255,20 @@ img {
   right: 0;
   opacity: 0;
   animation-name: appear;
-  animation-duration: 1.3s; /* Длительность анимации появления (в секундах) */
-  animation-fill-mode: forwards; /* Задерживает последний кадр анимации */
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
 }
 
 .animated-image.exit {
   animation-name: disappear;
-  animation-duration: 1.3s; /* Длительность анимации исчезновения (в секундах) */
-  animation-fill-mode: forwards; /* Задерживает последний кадр анимации */
+  animation-duration: 1.3s;
+  animation-fill-mode: forwards;
+}
+
+#achievements-list img {
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 280px;
 }
 
 @keyframes appear {
@@ -282,6 +289,6 @@ img {
   }
   100% {
     opacity: 0;
-    transform: translate(100%, 0); /* Измените значения смещения, чтобы изображение уехало за пределы экрана */
+    transform: translate(100%, 0);
   }
 }
