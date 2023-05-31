@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <title>Clicker</title>
-        <link rel="shortcut icon" href="gerb-ukraine.png" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-        <link rel="stylesheet" href="clicker.css" type="text/css">
-    </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UA-Clicker</title>
+  <link rel="shortcut icon" href="gerb-ukraine.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="clicker.css" type="text/css">
+</head>
 
-    <body>
-        <main>
-            <div id="display"></div>
+<body>
+  <main>
+    <div id="display"></div>
 
-            <button id="button">Тисніть</button>
+    <button id="button">Тисніть</button>
 
-            <div id="counter"></div>
+    <div id="counter"></div>
 
-            <div class="buttons" id="myButton" onclick="location.reload()"><span>Спочатку</span></div>
+    <div class="buttons" id="myButton" onclick="location.reload()"><span>Спочатку</span></div>
 
-            <div class="sound" id="soundContainer">
-                <div id="playButton" onclick="togglePlay()">
-                  <img id="playIcon" src="no-sound-icon.png" alt="Pause Icon" width="50">
-                </div>
-                <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" oninput="setVolume()">
-              </div>
-              <audio id="audio" src="свинячий-фонк.mp3"></audio>
+    <div class="sound" id="soundContainer">
+      <div id="playButton" onclick="togglePlay()">
+        <img id="playIcon" src="no-sound-icon.png" alt="Pause Icon" width="50">
+      </div>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" oninput="setVolume()">
+    </div>
+    <audio id="audio" src="свинячий-фонк.mp3"></audio>
 
-              <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
-                  <span></span>
-                </label>
-            
-                <ul class="menu__box" id="menu-box">
-                    <h1>Список досягнень</h1>
-                    <li id="achievements-list"></li>
-                </ul>
-              </div>
-        </main>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
 
-        <script src="clicker.js"></script>
-    </body>
+      <ul class="menu__box" id="menu-box">
+        <h1>Список досягнень</h1>
+        <div id="achievements-container">
+          <ul id="achievements-list"></ul>
+        </div>
+      </ul>
+    </div>
+  </main>
+
+  <script src="clicker.js"></script>
+</body>
 </html>
