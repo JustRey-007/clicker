@@ -7,11 +7,11 @@ const counter = document.querySelector('#counter');
 
 button.onclick = start;
 
-// функция клики
+// основной функционал
 function start() {
   const achievements = [
     { clicksRequired: 11, imageSrc: 'Досягнення(1).png' },
-    { clicksRequired: 31, imageSrc: 'Досягнення(2).png' },
+    { clicksRequired: 51, imageSrc: 'Досягнення(2).png' },
     { clicksRequired: 101, imageSrc: 'Досягнення(3).png' },
     { clicksRequired: 201, imageSrc: 'Досягнення(4).png' },
     { clicksRequired: 401, imageSrc: 'Досягнення(5).png' },
@@ -19,25 +19,26 @@ function start() {
     { clicksRequired: 1201, imageSrc: 'Досягнення(7).png' },
     { clicksRequired: 2001, imageSrc: 'Досягнення(8).png' },
     { clicksRequired: 4001, imageSrc: 'Досягнення(9).png' },
-    { clicksRequired: 10001, imageSrc: 'Досягнення(10).png' },
-    // Добавьте остальные достижения в формате { clicksRequired: <количество кликов>, imageSrc: '<путь к изображению>' }
+    { clicksRequired: 8001, imageSrc: 'Досягнення(10).png' },
+    { clicksRequired: 15001, imageSrc: 'Досягнення(11).png' },
+    { clicksRequired: 30001, imageSrc: 'Досягнення(12).png' },
   ];
 
   const achievedAchievements = [];
-
+  // клики
   button.onclick = () => {
     counter.textContent = clicks++;
 
     // Проверка достижений
     achievements.forEach((achievement) => {
-      if (clicks === achievement.clicksRequired && !achievedAchievements.includes(achievement)) {
+      if (clicks === achievement.clicksRequired  && !achievedAchievements.includes(achievement)) {
         addToAchievements(achievement);
         achievedAchievements.push(achievement);
       }
     });
   };
 }
-
+  // вывод достижений на экран
 function addToAchievements(achievement) {
   const image = document.createElement('img');
   image.src = achievement.imageSrc;
@@ -48,7 +49,7 @@ function addToAchievements(achievement) {
     image.classList.add('exit');
     setTimeout(() => {
       display.removeChild(image);
-    }, 2000); // Время задержки перед исчезновением (в миллисекундах)
+    }, 3000); // Время задержки перед исчезновением (в миллисекундах)
   }, 3000); // Время задержки перед запуском анимации исчезновения (в миллисекундах)
 
   // Добавление изображения в список достижений
@@ -58,17 +59,16 @@ function addToAchievements(achievement) {
   listItemImage.src = achievement.imageSrc;
   listItem.appendChild(listItemImage);
   achievementsList.appendChild(listItem);
-}
+}start();
 
-start();
-
-// кнопка проигрыватель + ползунок громкости
+  // кнопка проигрыватель + ползунок громкости
 let audio = document.getElementById('audio');
 let playIcon = document.getElementById('playIcon');
 let volumeControl = document.getElementById('volumeControl');
 let soundContainer = document.getElementById('soundContainer');
 let isPlaying = false;
 
+  // изменение кнопки при клике
 function togglePlay() {
   if (isPlaying) {
     audio.pause();
