@@ -266,9 +266,10 @@ img {
 }
 
 #achievements-list img {
-  margin-left: 10px;
+  margin-left: 8px;
   margin-top: 5px;
-  width: 280px;
+  width: 270px;
+  -webkit-user-drag: none;
 }
 
 @keyframes appear {
@@ -291,4 +292,35 @@ img {
     opacity: 0;
     transform: translate(100%, 0);
   }
+}
+
+#achievements-container {
+  height: 90vh; /* Используем высоту в процентах */
+  overflow-y: scroll;
+}
+
+#achievements-list {
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #b1b1b1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#scrollable-content {
+  height: 300px;
+  overflow: auto;
 }
