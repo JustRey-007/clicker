@@ -11,9 +11,9 @@ button.onclick = start;
 function start() {
   const achievements = [
     { clicksRequired: 11, imageSrc: 'Досягнення(1).png' },
-    { clicksRequired: 51, imageSrc: 'Досягнення(2).png' },
-    { clicksRequired: 101, imageSrc: 'Досягнення(3).png' },
-    { clicksRequired: 201, imageSrc: 'Досягнення(4).png' },
+    { clicksRequired: 101, imageSrc: 'Досягнення(2).png' },
+    { clicksRequired: 201, imageSrc: 'Досягнення(3).png' },
+    { clicksRequired: 301, imageSrc: 'Досягнення(4).png' },
     { clicksRequired: 401, imageSrc: 'Досягнення(5).png' },
     { clicksRequired: 701, imageSrc: 'Досягнення(6).png' },
     { clicksRequired: 1201, imageSrc: 'Досягнення(7).png' },
@@ -45,6 +45,8 @@ function addToAchievements(achievement) {
   image.classList.add('animated-image');
   display.appendChild(image);
 
+  playAchievementSound();
+
   setTimeout(() => {
     image.classList.add('exit');
     setTimeout(() => {
@@ -60,6 +62,12 @@ function addToAchievements(achievement) {
   listItem.appendChild(listItemImage);
   achievementsList.appendChild(listItem);
 }start();
+
+  // воспроизведение музыки при получении достижения
+function playAchievementSound() {
+  const achieveSound = new Audio('rare-achievement.mp3')
+  achieveSound.play();
+}
 
   // кнопка проигрыватель + ползунок громкости
 let audio = document.getElementById('audio');
