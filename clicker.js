@@ -11,17 +11,17 @@ button.onclick = start;
 function start() {
   const achievements = [
     { clicksRequired: 11, imageSrc: 'Досягнення(1).png' },
-    { clicksRequired: 101, imageSrc: 'Досягнення(2).png' },
-    { clicksRequired: 201, imageSrc: 'Досягнення(3).png' },
-    { clicksRequired: 301, imageSrc: 'Досягнення(4).png' },
+    { clicksRequired: 51, imageSrc: 'Досягнення(2).png' },
+    { clicksRequired: 101, imageSrc: 'Досягнення(3).png' },
+    { clicksRequired: 201, imageSrc: 'Досягнення(4).png' },
     { clicksRequired: 401, imageSrc: 'Досягнення(5).png' },
     { clicksRequired: 701, imageSrc: 'Досягнення(6).png' },
-    { clicksRequired: 1201, imageSrc: 'Досягнення(7).png' },
-    { clicksRequired: 2001, imageSrc: 'Досягнення(8).png' },
-    { clicksRequired: 4001, imageSrc: 'Досягнення(9).png' },
-    { clicksRequired: 8001, imageSrc: 'Досягнення(10).png' },
-    { clicksRequired: 15001, imageSrc: 'Досягнення(11).png' },
-    { clicksRequired: 30001, imageSrc: 'Досягнення(12).png' },
+    { clicksRequired: 1001, imageSrc: 'Досягнення(7).png' },
+    { clicksRequired: 1501, imageSrc: 'Досягнення(8).png' },
+    { clicksRequired: 2501, imageSrc: 'Досягнення(9).png' },
+    { clicksRequired: 5001, imageSrc: 'Досягнення(10).png' },
+    { clicksRequired: 10001, imageSrc: 'Досягнення(11).png' },
+    { clicksRequired: 15001, imageSrc: 'Досягнення(12).png' },
   ];
 
   const achievedAchievements = [];
